@@ -19,7 +19,10 @@ Add below snippet in package.json
 	- **deploy** - Deploys to the server, we can view the site on github page or custom domain URL as we set. **-d build** refers the destination folder we need to deploy to server. When we run this cmd first time it will create a branch 'gh-pages' in github.
 
 Source Branch for the GitHub Pages needs to set in https://github.com/karthicksivakumar191194/react-github-ci-test/settings
+![](https://github.com/karthicksivakumar191194/react-gh-pages-demo/blob/main/_readme_assets/settings.png)
 
+Custom Domain for GH-Pages
+![](https://github.com/karthicksivakumar191194/react-gh-pages-demo/blob/main/_readme_assets/cname.png)
 
 #### Manuall Deploy
 When you run **npm run deploy** in terminal, the **npm run build** cmd will run and the folders inside the 'build' pushed to github repo 'gh-pages' branch and you can view the output in the URL 
