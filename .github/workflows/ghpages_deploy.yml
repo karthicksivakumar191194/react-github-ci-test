@@ -1,0 +1,25 @@
+name: GH Pages - MainBranchDeployCI
+on:
+  push:
+    branches:
+      - main
+jobs:
+  GHPage-Deploy-Action:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install Packages
+      run: npm install
+    - name: Deploy to GH Pages
+      run: |
+        git config user.email "karthicksivakumardev@gmail.com"
+        git config user.name "Karthick Sivakumar"
+        git remote set-url origin https://${{secrets.PERSONAL_ACCESS_TOKEN}}@github.com/karthicksivakumar191194/react-github-ci-test.git
+        npm run deploy

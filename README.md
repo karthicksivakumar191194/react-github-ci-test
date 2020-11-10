@@ -26,3 +26,6 @@ Custom Domain for GH-Pages
 
 #### Manuall Deploy
 When you run **npm run deploy** in terminal, the **npm run build** cmd will run and the folders inside the 'build' pushed to github repo 'gh-pages' branch and you can view the output in the URL 
+
+#### Auto Deploy
+When codes pushed to **main** branch, will auto deploy to 'gh-pages'.
